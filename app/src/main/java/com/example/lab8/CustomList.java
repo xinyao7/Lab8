@@ -54,10 +54,8 @@ public class CustomList extends ArrayAdapter<City> {
      * @param city
      */
     public void addCity(City city){
-        list = MockCityList();
-        int listSize = list.getCount();
-        list.addCity(new City("Estevan","SK"));
-        assertEquals(list.getCount(),listSize+1);
+       
+        cities.add(city);
     }
 
     private CustomList list;
