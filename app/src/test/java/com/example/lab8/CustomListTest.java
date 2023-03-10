@@ -11,6 +11,16 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 public class CustomListTest {
-
+    private ArrayList<City> citylist;
+    @Test
+    public void init(){
+        citylist = new ArrayList<>();
+    }
+    public void testAddCity(){
+        CustomList list = new CustomList( null, citylist);
+        City city = new City("Edmonton","AB");
+        list.addCity(city);
+        assertEquals(1,list.getCount());
+    }
 
 }
